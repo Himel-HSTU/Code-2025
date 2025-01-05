@@ -55,7 +55,7 @@ int main(void)
     }
     array<int, 3> x2 = {1, 200, 33};
     array<int, 3> y2 = {11, 4, 23};
-    if (x2 < y2)
+    if (x2 < y2)//compare only the first element
     {
         cout << "x is less than y." << endl;
     }
