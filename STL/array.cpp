@@ -28,7 +28,7 @@ int main(void)
     // swapin between two arrays
     array<int, 3> x = {1, 3, 5};
     array<int, 3> y = {2, 4, 6};
-    x.swap(y);
+    x.swap(y);//@@@@@@
     cout << "\nAfter swap:" << endl;
     cout << "x: ";
     for (int num : x)
