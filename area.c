@@ -1,15 +1,12 @@
 #include <stdio.h>
+#include<stdbool.h>
 
 int main() {
-
-        for (int i = 5; i >0; --i)
-        {
-            for (int j = 0; j < i; j++)
-            {
-                printf("*");
-            }
-            printf("\n");
-        }
+    char c;
+    while (scanf("%c",&c)!= EOF)
+    {
+        printf("%c\n",c);
+    }
     
     return 0;
 }

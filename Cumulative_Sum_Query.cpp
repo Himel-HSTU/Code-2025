@@ -114,9 +114,9 @@ void faltu( T arg, const hello &... rest) {
             cerr << arg << ' ';
                 faltu(rest...);
 }
-const int mx= 2e5+10;
-int ar[mx];
-ll psum[mx]; 
+//const int mx= 2e5+10;
+//int ar[mx];
+//ll psum[mx]; 
 
 int main() {
     int N;

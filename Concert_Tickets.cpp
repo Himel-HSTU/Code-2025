@@ -7,26 +7,26 @@ ios::sync_with_stdio(false);
 cin.tie(0);
     ll n,m;
     cin>>n>>m;
-    vector<int> t(n);
-    vector<int> c(m);
+    multiset<ll>ms;
     for (int i = 0; i < n; i++)
-        cin>>t[i];
-    for (int i = 0; i < m; i++)
-        cin>>c[i];
-    sort(t.begin(),t.end());
-   // sort(c.begin(),c.end());
-    int ctr=0,f=0,s=0;
-    while (f<n &&  s<m)
     {
-        if (t[f]<=c[s])
+        ll p;
+        cin>>p;
+        ms.insert(p);
+    }
+    for (int i = 0; i < m; i++)
+    {
+        ll cp;
+        cin>>cp;
+        auto it= ms.upper_bound(cp);
+        if (it==ms.begin())
         {
-            cout<<t[f]<<"\n";
-            f++;
-            s++;
-        }
-        else if (t[f]>c[s]){
             cout<<"-1\n";
-            s++;
+            continue;
+        }
+        else {
+            cout<<*(--it)<<"\n";
+            ms.erase(it);
         }
     }
     return 0;
